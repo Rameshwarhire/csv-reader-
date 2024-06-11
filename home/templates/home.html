@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content%}
+
+<form class="container mt-5" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="input-group">
+        <input type="file" class="form-control" name="file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <button class="btn btn-outline-secondary" type="submit" value="Upload" id="inputGroupFileAddon04">submit</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button class="btn btn-primary" href="{% url 'home' %}" >histogram</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content%}
+<head>
+    <title>Histogram Plot</title>
+</head>
+<body>
+    <h1>Histograms for Numerical Columns</h1>
+    <img src="data:image/png;base64,{{ histogram }}" alt="Histogram">
+</body>
+</html>
+{% endblock %}
